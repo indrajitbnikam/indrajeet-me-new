@@ -1,0 +1,7 @@
+.sectionTitle {
+  @apply text-6xl text-gray-600 dark:text-gray-300;
+
+  span {
+    @apply font-semibold text-sky-400 dark:text-[#e4cf59];
+  }
+}
