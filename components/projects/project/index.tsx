@@ -5,16 +5,7 @@ import { MdDateRange } from 'react-icons/md';
 import client from '../../../client';
 import { getFormattedDate } from '../../../helpers/date';
 import Tags from '../../tags';
-
-interface ProjectInfo {
-  title: string;
-  desc: string;
-  img: any;
-  repo: string;
-  demo: string;
-  date: string;
-  tags: any[];
-}
+import { ProjectInfo } from '../types';
 
 const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
   const imageProps = useNextSanityImage(client, img);
@@ -28,7 +19,7 @@ const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
   };
 
   return (
-    <div className="rounded-lg overflow-hidden flex flex-col border dark:border-0 bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:translate-y-[-4px] transition-transform">
+    <div className="rounded-lg overflow-hidden flex flex-col border border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:scale-[101%] transition-transform">
       <Image {...imageProps} alt={title} layout="responsive" />
       <div className="px-6 pt-4 pb-5 flex flex-col flex-grow">
         <p className="font-bold text-xl text-gray-800 dark:text-gray-200 mb-2 cursor-pointer">

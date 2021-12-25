@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { getFirstNBlogs } from '../../services/api';
+import React from 'react';
 import Blog from './blog';
 import Link from 'next/link';
+import { BlogInfo } from './types';
 
-const Blogs = () => {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const blogResponse = await getFirstNBlogs();
-      setBlogs(blogResponse);
-    };
-    fetchData();
-  }, []);
-
+const Blogs = ({ blogs }: { blogs: BlogInfo[] }) => {
   return (
     <div className="flex flex-col">
       <div className="grid grid-cols-3 gap-8">

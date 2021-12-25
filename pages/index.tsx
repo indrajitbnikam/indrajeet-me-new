@@ -1,12 +1,13 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import Blogs from '../components/blogs';
 import Hero from '../components/hero';
 import Projects from '../components/projects';
-import SectionLayout from '../components/section-layout';
+import SectionLayout from '../layouts/section-layout';
 import Skills from '../components/skills';
+import { getFirstNBlogs, getFirstNProjects } from '../services/api';
 
-const Home: NextPage = () => {
+const Home: NextPage = ({ blogs, projects }: any) => {
   return (
     <>
       <Head>
@@ -17,16 +18,16 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <SectionLayout title="My" highlightedTitle="Skills">
+      <SectionLayout title="My" highlightedTitle="Skillssss">
         <Skills />
       </SectionLayout>
 
       <SectionLayout title="My" highlightedTitle="Blogs">
-        <Blogs />
+        <Blogs blogs={blogs} />
       </SectionLayout>
 
       <SectionLayout title="My" highlightedTitle="Projects">
-        <Projects />
+        <Projects projects={projects} />
       </SectionLayout>
 
       {/* <SectionLayout title="My" highlightedTitle="Projects">
@@ -42,6 +43,20 @@ const Home: NextPage = () => {
       </SectionLayout> */}
     </>
   );
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const [blogs, projects] = await Promise.all([
+    getFirstNBlogs(),
+    getFirstNProjects(),
+  ]);
+
+  return {
+    props: {
+      blogs,
+      projects,
+    },
+  };
 };
 
 export default Home;

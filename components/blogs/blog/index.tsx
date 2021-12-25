@@ -9,15 +9,7 @@ import { MdDateRange } from 'react-icons/md';
 import { useRouter } from 'next/router';
 import { getFormattedDate } from '../../../helpers/date';
 import Tags from '../../tags';
-
-interface BlogInfo {
-  title: string;
-  desc: string;
-  img: any;
-  url: string;
-  date: string;
-  tags: any[];
-}
+import { BlogInfo } from '../types';
 
 const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
   const imageProps = useNextSanityImage(client, img);
@@ -27,7 +19,7 @@ const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
   };
 
   return (
-    <div className="rounded-lg overflow-hidden flex flex-col border dark:border-0 bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:translate-y-[-4px] transition-transform">
+    <div className="rounded-lg overflow-hidden flex flex-col border border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:scale-[101%] transition-transform">
       <Image
         {...imageProps}
         alt={title}
@@ -36,12 +28,6 @@ const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
         onClick={openBlog}
       />
       <div className="px-6 pt-4 pb-5 flex flex-col flex-grow">
-        <p
-          className="font-bold text-xl text-gray-800 dark:text-gray-200 mb-2 cursor-pointer"
-          onClick={openBlog}
-        >
-          {title}
-        </p>
         <div className="flex items-center mb-2">
           <span className="text-gray-600 dark:text-gray-400">
             <MdDateRange />
@@ -50,6 +36,12 @@ const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
             {getFormattedDate(date)}
           </span>
         </div>
+        <p
+          className="font-bold text-xl text-gray-800 dark:text-gray-200 mb-2 cursor-pointer"
+          onClick={openBlog}
+        >
+          {title}
+        </p>
         <p className="line-clamp-3 text-gray-600 dark:text-gray-400 mb-6">
           {desc}
         </p>

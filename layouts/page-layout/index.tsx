@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Footer from '../footer';
-import Header from '../header';
+import Footer from '../../components/footer';
+import Header from '../../components/header';
 import styles from './style.module.scss';
 import classNames from 'classnames';
 import { useTheme } from 'next-themes';
 
-const Layout = ({ children }: any) => {
+const PageLayout = ({ children }: any) => {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
@@ -28,4 +28,4 @@ const Layout = ({ children }: any) => {
   );
 };
 
-export default Layout;
+export default PageLayout;

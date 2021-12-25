@@ -2,18 +2,9 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { getFirstNProjects } from '../../services/api';
 import Project from './project';
+import { ProjectInfo } from './types';
 
-const Projects = () => {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const blogResponse = await getFirstNProjects();
-      setProjects(blogResponse);
-    };
-    fetchData();
-  }, []);
-
+const Projects = ({ projects }: { projects: ProjectInfo[] }) => {
   return (
     <div className="flex flex-col">
       <div className="grid grid-cols-3 gap-8">
