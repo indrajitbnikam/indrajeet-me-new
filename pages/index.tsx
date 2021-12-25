@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Blogs from '../components/blogs';
 import Hero from '../components/hero';
+import Projects from '../components/projects';
 import SectionLayout from '../components/section-layout';
 import Skills from '../components/skills';
 
@@ -22,6 +23,10 @@ const Home: NextPage = () => {
 
       <SectionLayout title="My" highlightedTitle="Blogs">
         <Blogs />
+      </SectionLayout>
+
+      <SectionLayout title="My" highlightedTitle="Projects">
+        <Projects />
       </SectionLayout>
 
       {/* <SectionLayout title="My" highlightedTitle="Projects">

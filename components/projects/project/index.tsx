@@ -1,45 +1,37 @@
-import React from 'react';
-import Image from 'next/image';
 import { useNextSanityImage } from 'next-sanity-image';
-
-import client from '../../../client';
-
-// Images
+import Image from 'next/image';
+import React from 'react';
 import { MdDateRange } from 'react-icons/md';
-import { useRouter } from 'next/router';
+import client from '../../../client';
 import { getFormattedDate } from '../../../helpers/date';
 import Tags from '../../tags';
 
-interface BlogInfo {
+interface ProjectInfo {
   title: string;
   desc: string;
   img: any;
-  url: string;
+  repo: string;
+  demo: string;
   date: string;
   tags: any[];
 }
 
-const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
+const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
   const imageProps = useNextSanityImage(client, img);
 
-  const openBlog = () => {
-    window.open(url, '_blank');
+  const openProjectRepo = () => {
+    window.open(repo, '_blank');
+  };
+
+  const openProjectDemo = () => {
+    window.open(demo, '_blank');
   };
 
   return (
     <div className="rounded-lg overflow-hidden flex flex-col border dark:border-0 bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:translate-y-[-4px] transition-transform">
-      <Image
-        {...imageProps}
-        alt={title}
-        layout="responsive"
-        className="cursor-pointer"
-        onClick={openBlog}
-      />
+      <Image {...imageProps} alt={title} layout="responsive" />
       <div className="px-6 pt-4 pb-5 flex flex-col flex-grow">
-        <p
-          className="font-bold text-xl text-gray-800 dark:text-gray-200 mb-2 cursor-pointer"
-          onClick={openBlog}
-        >
+        <p className="font-bold text-xl text-gray-800 dark:text-gray-200 mb-2 cursor-pointer">
           {title}
         </p>
         <div className="flex items-center mb-2">
@@ -59,4 +51,4 @@ const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
   );
 };
 
-export default Blog;
+export default Project;
