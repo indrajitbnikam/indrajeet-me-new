@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const Hero = () => {
-  const iamPhrases = ['#ReactDeveloper', '#Web3Evangelist', '#TechEnthusiast'];
+  const iamPhrases = ['#ReactDeveloper', '#Web3Enthusiast', '#AnimeLover'];
   const [iamPhrase, setIamPhrase] = useState(iamPhrases[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
 

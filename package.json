@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^1.0.1",
     "@tailwindcss/line-clamp": "^0.3.0",

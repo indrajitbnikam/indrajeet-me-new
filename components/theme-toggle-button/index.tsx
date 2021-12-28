@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useTheme } from 'next-themes';
+import styles from './style.module.scss';
 import { IconContext } from 'react-icons';
 import { RiMoonClearFill, RiSunLine } from 'react-icons/ri';
-import styles from './style.module.scss';
 
-const ThemeToggleButton = () => {
+const ThemeToggleButton = ({ extraClasses, ...props }: any) => {
   const { theme, setTheme } = useTheme();
 
   const isDarkTheme = theme === 'dark';
@@ -13,17 +13,19 @@ const ThemeToggleButton = () => {
 
   return (
     <IconContext.Provider
-      value={{ size: '24px', color: isDarkTheme ? '#f8f7f1' : undefined }}
+      value={{ size: '24px', color: isDarkTheme ? '#f8f7f1' : '#4B5563' }}
     >
       {isDarkTheme ? (
         <RiMoonClearFill
-          className={`cursor-pointer ${styles.spinOneTime}`}
+          className={`cursor-pointer ${styles.spinOneTime} ${extraClasses}`}
           onClick={onThemeToggle}
+          {...props}
         />
       ) : (
         <RiSunLine
-          className={`cursor-pointer ${styles.spinOneTime}`}
+          className={`cursor-pointer ${styles.spinOneTime} ${extraClasses}`}
           onClick={onThemeToggle}
+          {...props}
         />
       )}
     </IconContext.Provider>
