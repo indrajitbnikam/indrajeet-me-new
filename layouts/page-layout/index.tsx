@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Footer from '../../components/footer';
-import Header from '../../components/header';
+import Footer from '../../containers/footer';
+import Header from '../../containers/header';
 import styles from './style.module.scss';
 import classNames from 'classnames';
 import { useTheme } from 'next-themes';

@@ -1,10 +1,10 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import Blogs from '../components/blogs';
-import Hero from '../components/hero';
-import Projects from '../components/projects';
+import Blogs from '../containers/blogs';
+import Hero from '../containers/hero';
+import Projects from '../containers/projects';
 import SectionLayout from '../layouts/section-layout';
-import Skills from '../components/skills';
+import Skills from '../containers/skills';
 import { getFirstNBlogs, getFirstNProjects } from '../services/api';
 
 const Home: NextPage = ({ blogs, projects }: any) => {

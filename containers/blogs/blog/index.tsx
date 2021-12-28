@@ -8,7 +8,7 @@ import client from '../../../client';
 import { MdDateRange } from 'react-icons/md';
 import { useRouter } from 'next/router';
 import { getFormattedDate } from '../../../helpers/date';
-import Tags from '../../tags';
+import Tags from '../../../components/tags';
 import { BlogInfo } from '../types';
 
 const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {

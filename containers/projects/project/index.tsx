@@ -4,7 +4,7 @@ import React from 'react';
 import { MdDateRange } from 'react-icons/md';
 import client from '../../../client';
 import { getFormattedDate } from '../../../helpers/date';
-import Tags from '../../tags';
+import Tags from '../../../components/tags';
 import { ProjectInfo } from '../types';
 
 const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
