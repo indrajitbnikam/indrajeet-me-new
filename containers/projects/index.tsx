@@ -13,7 +13,7 @@ const Projects = ({
 }) => {
   return (
     <div className="flex flex-col">
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-8">
         {projects &&
           projects.map((project: any) => (
             <Project key={project.title} {...project} />

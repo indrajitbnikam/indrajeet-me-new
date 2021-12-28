@@ -18,7 +18,7 @@ const Home: NextPage = ({ blogs, projects }: any) => {
 
       <Hero />
 
-      <SectionLayout title="My" highlightedTitle="Skillssss">
+      <SectionLayout title="My" highlightedTitle="Skills">
         <Skills />
       </SectionLayout>
 
@@ -26,9 +26,9 @@ const Home: NextPage = ({ blogs, projects }: any) => {
         <Blogs blogs={blogs} />
       </SectionLayout>
 
-      <SectionLayout title="My" highlightedTitle="Projects">
+      {/* <SectionLayout title="My" highlightedTitle="Projects">
         <Projects projects={projects} />
-      </SectionLayout>
+      </SectionLayout> */}
 
       {/* <SectionLayout title="My" highlightedTitle="Projects">
         Projects

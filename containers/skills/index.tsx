@@ -42,7 +42,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {skillsArray.map(({ name, src }) => (
         <SkillItem key={name} iconSrc={src} name={name} />
       ))}
