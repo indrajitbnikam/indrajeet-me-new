@@ -21,3 +21,8 @@ export const getFirstNProjects = async (n: number = 3) =>
   client.fetch(
     `*[_type == "project"] | order(date desc)[0...${n}] ${projectDataModel}`
   );
+
+export const getResume = async () =>
+  client.fetch(
+    `*[_type == "files" && name == 'Resume'][0] { name, "url": file.asset->url }`
+  );

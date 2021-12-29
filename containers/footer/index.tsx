@@ -4,9 +4,7 @@ const Footer = () => {
   return (
     <footer className="text-gray-600 dark:text-gray-300">
       <div className="w-full h-16 grid place-content-center">
-        <p className="text-center hover:animate-pulse">
-          Made with 💖 using Next.js
-        </p>
+        <p className="text-center">Made with 💖 using Next.js</p>
       </div>
     </footer>
   );

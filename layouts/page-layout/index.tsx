@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 import classNames from 'classnames';
 import { useTheme } from 'next-themes';
 
-const PageLayout = ({ children }: any) => {
+const PageLayout = ({ headerProps, children }: any) => {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
@@ -21,7 +21,7 @@ const PageLayout = ({ children }: any) => {
 
   return (
     <div className={classNames('min-h-screen flex flex-col', getThemeClass)}>
-      <Header />
+      <Header {...headerProps} />
       <div className="flex-grow">{children}</div>
       <Footer />
     </div>

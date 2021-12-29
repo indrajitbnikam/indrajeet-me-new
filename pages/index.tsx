@@ -5,7 +5,7 @@ import Hero from '../containers/hero';
 import Projects from '../containers/projects';
 import SectionLayout from '../layouts/section-layout';
 import Skills from '../containers/skills';
-import { getFirstNBlogs, getFirstNProjects } from '../services/api';
+import { getFirstNBlogs, getFirstNProjects, getResume } from '../services/api';
 
 const Home: NextPage = ({ blogs, projects }: any) => {
   return (
@@ -46,15 +46,17 @@ const Home: NextPage = ({ blogs, projects }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const [blogs, projects] = await Promise.all([
+  const [blogs, projects, resumeData] = await Promise.all([
     getFirstNBlogs(),
     getFirstNProjects(),
+    getResume(),
   ]);
 
   return {
     props: {
       blogs,
       projects,
+      resumeUrl: resumeData.url,
     },
   };
 };
