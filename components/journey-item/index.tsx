@@ -11,8 +11,6 @@ const JourneyItem = ({ name, desc, img, date }: any) => {
 
   const imageProps = useNextSanityImage(configuredSanityClient, img);
 
-  const openImage = () => {};
-
   return (
     <>
       <div className="max-w-lg flex flex-col items-start border-2 border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#fffdf8b0] dark:bg-[#fffdf810] rounded-lg px-5 py-4 mb-6">

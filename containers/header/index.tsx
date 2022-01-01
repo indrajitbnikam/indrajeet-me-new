@@ -47,15 +47,15 @@ const Header = () => {
         <nav className="hidden md:ml-auto md:flex flex-wrap items-center text-base justify-center">
           <p
             className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
-            onClick={() => navigateTo('/blogs')}
-          >
-            Blogs
-          </p>
-          <p
-            className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
             onClick={() => navigateTo('/projects')}
           >
             Projects
+          </p>
+          <p
+            className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
+            onClick={() => navigateTo('/blogs')}
+          >
+            Blogs
           </p>
           <p
             className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
@@ -87,17 +87,17 @@ const Header = () => {
               <div className="w-full text-center py-3 mb-2 rounded-xl group hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">
                 <p
                   className="font-semibold cursor-pointer"
-                  onClick={() => navigateTo('/blogs')}
+                  onClick={() => navigateTo('/projects')}
                 >
-                  Blogs
+                  Projects
                 </p>
               </div>
               <div className="w-full text-center py-3 mb-2 rounded-xl group hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">
                 <p
                   className="font-semibold cursor-pointer"
-                  onClick={() => navigateTo('/projects')}
+                  onClick={() => navigateTo('/blogs')}
                 >
-                  Projects
+                  Blogs
                 </p>
               </div>
               <div className="w-full text-center py-3 mb-2 rounded-xl group hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">

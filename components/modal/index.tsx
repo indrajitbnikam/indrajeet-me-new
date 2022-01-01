@@ -38,7 +38,7 @@ const Modal = ({ children, onClose }: any) => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-            <div className="inline-block w-full max-w-3xl p-2 my-8 overflow-hidden bg-[#fffdf8b0] dark:bg-[#fffdf81a] text-left align-middle transition-all transform shadow-xl rounded-2xl">
+            <div className="inline-block w-full max-w-lg lg:max-w-3xl p-2 my-8 overflow-hidden bg-[#fffdf8b0] dark:bg-[#fffdf81a] text-left align-middle transition-all transform shadow-xl rounded-2xl">
               {children}
             </div>
           </Transition.Child>

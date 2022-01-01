@@ -22,13 +22,13 @@ const Home: NextPage = ({ blogs, projects }: any) => {
         <Skills />
       </SectionLayout>
 
+      <SectionLayout title="My" highlightedTitle="Projects">
+        <Projects projects={projects} />
+      </SectionLayout>
+
       <SectionLayout title="My" highlightedTitle="Blogs">
         <Blogs blogs={blogs} />
       </SectionLayout>
-
-      {/* <SectionLayout title="My" highlightedTitle="Projects">
-        <Projects projects={projects} />
-      </SectionLayout> */}
 
       {/* <SectionLayout title="My" highlightedTitle="Projects">
         Projects

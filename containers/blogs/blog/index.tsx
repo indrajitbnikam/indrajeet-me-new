@@ -6,7 +6,6 @@ import client from '../../../client';
 
 // Images
 import { MdDateRange } from 'react-icons/md';
-import { useRouter } from 'next/router';
 import { getFormattedDate } from '../../../helpers/date';
 import Tags from '../../../components/tags';
 import { BlogInfo } from '../types';
