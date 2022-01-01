@@ -58,6 +58,12 @@ const Header = () => {
             Projects
           </p>
           <p
+            className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
+            onClick={() => navigateTo('/contact')}
+          >
+            Contact
+          </p>
+          <p
             className="mr-8 px-4 py-2 cursor-pointer rounded-lg border border-gray-600 dark:border-transparent bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
             onClick={() => navigateTo('/resume')}
           >
@@ -92,6 +98,14 @@ const Header = () => {
                   onClick={() => navigateTo('/projects')}
                 >
                   Projects
+                </p>
+              </div>
+              <div className="w-full text-center py-3 mb-2 rounded-xl group hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">
+                <p
+                  className="font-semibold cursor-pointer"
+                  onClick={() => navigateTo('/contact')}
+                >
+                  Contact
                 </p>
               </div>
               <div className="w-full text-center py-3 mb-2 rounded-xl group border border-gray-600 dark:border-[#e4cf59] hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">

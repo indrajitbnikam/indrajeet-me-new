@@ -14,8 +14,8 @@ const ResumePage: NextPage = ({ resumeUrl, journey }: any) => {
   return (
     <>
       <Head>
-        <title>Indrajeet Nikam - Projects</title>
-        <meta name="description" content="Indrajeet Nikam - Projects" />
+        <title>Indrajeet Nikam - Resume</title>
+        <meta name="description" content="Indrajeet Nikam - Resume" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
