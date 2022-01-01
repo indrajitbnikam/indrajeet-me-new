@@ -9,12 +9,13 @@ import { MdDateRange } from 'react-icons/md';
 import { getFormattedDate } from '../../../helpers/date';
 import Tags from '../../../components/tags';
 import { BlogInfo } from '../types';
+import { openUrl } from '../../../helpers/url';
 
 const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
   const imageProps = useNextSanityImage(client, img);
 
   const openBlog = () => {
-    window.open(url, '_blank');
+    openUrl(url);
   };
 
   return (

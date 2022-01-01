@@ -6,8 +6,10 @@ import client from '../../../client';
 import { getFormattedDate } from '../../../helpers/date';
 import Tags from '../../../components/tags';
 import { ProjectInfo } from '../types';
-import { AiOutlineEye, AiOutlineGithub, AiOutlineLink } from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineLink } from 'react-icons/ai';
 import Modal from '../../../components/modal';
+import { SiGithub } from 'react-icons/si';
+import { openUrl } from '../../../helpers/url';
 
 const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
   const [open, setOpen] = useState(false);
@@ -18,11 +20,11 @@ const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
   };
 
   const openProjectRepo = () => {
-    window.open(repo, '_blank');
+    openUrl(repo);
   };
 
   const openProjectDemo = () => {
-    window.open(demo, '_blank');
+    openUrl(demo);
   };
 
   return (
@@ -49,7 +51,7 @@ const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
               className="cursor-pointer rounded-lg mr-2 px-2 py-2 flex items-center text-xl font-medium dark:hover:bg-[#e4cf59] hover:bg-sky-300 hover:text-sky-800 dark:hover:text-gray-800 text-gray-700 dark:text-gray-300 dark:bg-gray-700 bg-gray-200"
               onClick={() => openProjectRepo()}
             >
-              <AiOutlineGithub />
+              <SiGithub />
             </div>
             <div
               className="cursor-pointer rounded-lg px-2 py-2 flex items-center text-xl font-medium dark:hover:bg-[#e4cf59] hover:bg-sky-300 hover:text-sky-800 dark:hover:text-gray-800 text-gray-700 dark:text-gray-300 dark:bg-gray-700 bg-gray-200"
