@@ -7,18 +7,13 @@ import { VscChromeClose } from 'react-icons/vsc';
 import styles from './style.module.scss';
 import { Transition } from '@headlessui/react';
 import { useRouter } from 'next/router';
-import { saveAs } from 'file-saver';
 
-const Header = ({ resumeUrl }: { resumeUrl: string }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
   const navigateTo = (path: string) => {
     router.push(path).finally(() => setIsOpen(false));
-  };
-
-  const openResume = () => {
-    saveAs(resumeUrl, 'Indrajeet-nikam_Resume.pdf');
   };
 
   const getMobileNavButton = () => {
@@ -63,8 +58,8 @@ const Header = ({ resumeUrl }: { resumeUrl: string }) => {
             Projects
           </p>
           <p
-            className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
-            onClick={() => openResume()}
+            className="mr-8 px-4 py-2 cursor-pointer rounded-lg border border-gray-600 dark:border-transparent bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
+            onClick={() => navigateTo('/resume')}
           >
             Resume
           </p>
@@ -99,10 +94,10 @@ const Header = ({ resumeUrl }: { resumeUrl: string }) => {
                   Projects
                 </p>
               </div>
-              <div className="w-full text-center py-3 mb-2 rounded-xl group hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">
+              <div className="w-full text-center py-3 mb-2 rounded-xl group border border-gray-600 dark:border-[#e4cf59] hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">
                 <p
                   className="font-semibold cursor-pointer"
-                  onClick={() => openResume()}
+                  onClick={() => navigateTo('/resume')}
                 >
                   Resume
                 </p>

@@ -3,7 +3,7 @@ import React from 'react';
 
 const SkillItem = ({ iconSrc, name, description }: any) => {
   return (
-    <div className="flex align-middle border rounded-md border-transparent px-6 py-4 bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:border-sky-400 dark:hover:border-[#e4cf59] hover:scale-[101%] transition-transform">
+    <div className="flex align-middle border rounded-md border-transparent px-6 py-4 bg-[#fffdf8b0] dark:bg-[#fffdf81a] sm:hover:scale-105 transition-transform">
       <div className="mr-4 flex align-middle">
         <Image alt="name" src={iconSrc} width={32} height={32} />
       </div>

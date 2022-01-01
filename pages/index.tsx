@@ -46,17 +46,15 @@ const Home: NextPage = ({ blogs, projects }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const [blogs, projects, resumeData] = await Promise.all([
+  const [blogs, projects] = await Promise.all([
     getFirstNBlogs(),
     getFirstNProjects(),
-    getResume(),
   ]);
 
   return {
     props: {
       blogs,
       projects,
-      resumeUrl: resumeData.url,
     },
   };
 };

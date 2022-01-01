@@ -10,7 +10,7 @@ const SectionLayout = ({ title, highlightedTitle, children }: any) => {
             {highlightedTitle}
           </span>
         </p>
-        <div className="p-5 pt-8 sm:pt-14">{children}</div>
+        <div className="pt-8 sm:pt-14">{children}</div>
       </div>
     </section>
   );

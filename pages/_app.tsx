@@ -6,7 +6,7 @@ import PageLayout from '../layouts/page-layout';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
-      <PageLayout headerProps={{ resumeUrl: pageProps.resumeUrl }}>
+      <PageLayout>
         <Component {...pageProps} />
       </PageLayout>
     </ThemeProvider>

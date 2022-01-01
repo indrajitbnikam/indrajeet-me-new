@@ -26,3 +26,12 @@ export const getResume = async () =>
   client.fetch(
     `*[_type == "files" && name == 'Resume'][0] { name, "url": file.asset->url }`
   );
+
+export const getJourney = async () =>
+  client.fetch(`*[_type == "journey"] | order(date desc) {
+    name,
+    desc,
+    img,
+    date,
+    journeyType
+  }`);
