@@ -8,12 +8,20 @@ const Skills = () => {
       src: 'https://cdn.worldvectorlogo.com/logos/react-2.svg',
     },
     {
+      name: 'Next.js',
+      src: 'https://cdn.worldvectorlogo.com/logos/next-js.svg',
+    },
+    {
       name: 'Angular',
       src: 'https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg',
     },
     {
       name: 'SCSS',
       src: 'https://cdn.worldvectorlogo.com/logos/sass-1.svg',
+    },
+    {
+      name: 'Tailwind CSS',
+      src: 'https://cdn.worldvectorlogo.com/logos/tailwindcss.svg',
     },
     {
       name: 'JavaScript',
