@@ -63,9 +63,9 @@ const Hero = () => {
               </span>
             </span>
           </p>
-          <p className="leading-relaxed text-2xl sm:text-3xl text-gray-400 dark:text-gray-300">
+          <p className="leading-relaxed text-2xl ml-0 sm:ml-1 sm:text-3xl text-gray-400">
             I build{' '}
-            <span className="underline underline-offset-2 decoration-sky-400 dark:decoration-[#e4cf59]">
+            <span className="underline underline-offset-2 text-gray-600 decoration-sky-400 dark:decoration-[#e4cf59]">
               {iamPhrase}
             </span>{' '}
             products.
