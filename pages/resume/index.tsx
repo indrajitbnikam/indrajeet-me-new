@@ -21,7 +21,7 @@ const ResumePage: NextPage = ({ resumeUrl, journey }: any) => {
 
       <div className="max-w-[1200px] mx-auto flex justify-start px-5 pt-8">
         <button
-          className="flex items-center text-xl rounded-lg px-6 py-2 border border-transparent bg-sky-200 text-sky-600 hover:bg-[#fffdf8b0] hover:border-sky-600 dark:bg-[#e4cf59] dark:text-gray-800 dark:hover:text-[#e4cf59] dark:hover:border-[#e4cf59] dark:hover:bg-[#fffdf81a] transition-all animate-bounce animate-bounce"
+          className="flex items-center text-xl rounded-lg px-6 py-2 border border-transparent bg-sky-200 text-sky-600 hover:bg-[#ffffffb0] hover:border-sky-600 dark:bg-[#e4cf59] dark:text-gray-800 dark:hover:text-[#e4cf59] dark:hover:border-[#e4cf59] dark:hover:bg-[#fffdf81a] transition-all animate-bounce animate-bounce"
           onClick={() => downloadResume()}
         >
           <span className="mr-4">

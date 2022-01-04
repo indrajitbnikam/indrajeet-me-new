@@ -50,7 +50,7 @@ const ContactForm = () => {
               type="text"
               id="from_name"
               name="from_name"
-              className="w-full mt-2 bg-[#fffdf8b0] dark:bg-[#fffdf81a] rounded border border-gray-300 dark:border-transparent focus:border-sky-400 dark:focus:border-[#e4cf59] text-base outline-none text-gray-800 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full mt-2 bg-[#ffffffb0] dark:bg-[#fffdf81a] rounded border border-gray-300 dark:border-transparent focus:border-sky-400 dark:focus:border-[#e4cf59] text-base outline-none text-gray-800 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="w-full md:w-1/2">
@@ -64,7 +64,7 @@ const ContactForm = () => {
               type="email"
               id="from_email"
               name="from_email"
-              className="w-full mt-2 bg-[#fffdf8b0] dark:bg-[#fffdf81a] rounded border border-gray-300 dark:border-transparent focus:border-sky-400 dark:focus:border-[#e4cf59] text-base outline-none text-gray-800 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full mt-2 bg-[#ffffffb0] dark:bg-[#fffdf81a] rounded border border-gray-300 dark:border-transparent focus:border-sky-400 dark:focus:border-[#e4cf59] text-base outline-none text-gray-800 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
@@ -79,12 +79,12 @@ const ContactForm = () => {
             as="textarea"
             id="message"
             name="message"
-            className="h-32 w-full mt-2 bg-[#fffdf8b0] dark:bg-[#fffdf81a] rounded border border-gray-300 dark:border-transparent focus:border-sky-400 dark:focus:border-[#e4cf59] text-base outline-none text-gray-800 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            className="h-32 w-full mt-2 bg-[#ffffffb0] dark:bg-[#fffdf81a] rounded border border-gray-300 dark:border-transparent focus:border-sky-400 dark:focus:border-[#e4cf59] text-base outline-none text-gray-800 dark:text-gray-300 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           ></Field>
         </div>
         <div className="self-center">
           <button
-            className="flex items-center text-xl rounded-lg px-6 py-2 disabled:bg-gray-200 disabled:text-gray-600 disabled:dark:bg-gray-200 disabled:dark:text-gray-600 disabled:hover:border-transparent disabled:cursor-not-allowed border border-transparent bg-sky-200 text-sky-600 hover:bg-[#fffdf8b0] hover:border-sky-600 dark:bg-[#e4cf59] dark:text-gray-800 dark:hover:text-[#e4cf59] dark:hover:border-[#e4cf59] dark:hover:bg-[#fffdf81a] transition-all"
+            className="flex items-center text-xl rounded-lg px-6 py-2 disabled:bg-gray-200 disabled:text-gray-600 disabled:dark:bg-gray-200 disabled:dark:text-gray-600 disabled:hover:border-transparent disabled:cursor-not-allowed border border-transparent bg-sky-200 text-sky-600 hover:bg-[#ffffffb0] hover:border-sky-600 dark:bg-[#e4cf59] dark:text-gray-800 dark:hover:text-[#e4cf59] dark:hover:border-[#e4cf59] dark:hover:bg-[#fffdf81a] transition-all"
             disabled={sent || loading}
           >
             {!sent ? (

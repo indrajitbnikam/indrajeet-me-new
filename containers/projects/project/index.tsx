@@ -28,7 +28,7 @@ const Project = ({ title, desc, img, repo, demo, date, tags }: ProjectInfo) => {
   };
 
   return (
-    <div className="rounded-lg overflow-hidden flex flex-col border border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:scale-[101%] transition-transform">
+    <div className="rounded-lg overflow-hidden flex flex-col border border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#ffffffb0] dark:bg-[#fffdf81a] hover:scale-[101%] transition-transform">
       <Image {...imageProps} alt={title} layout="responsive" />
       <div className="px-6 pt-4 pb-5 flex flex-col flex-grow">
         <div className="flex items-center justify-between mb-4 mt-2 h-6">

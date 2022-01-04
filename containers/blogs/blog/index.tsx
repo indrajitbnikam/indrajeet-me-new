@@ -19,7 +19,7 @@ const Blog = ({ title, desc, img, date, url, tags }: BlogInfo) => {
   };
 
   return (
-    <div className="rounded-lg overflow-hidden flex flex-col border border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:scale-[101%] transition-transform">
+    <div className="rounded-lg overflow-hidden flex flex-col border border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#ffffffb0] dark:bg-[#fffdf81a] hover:scale-[101%] transition-transform">
       <Image
         {...imageProps}
         alt={title}

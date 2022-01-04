@@ -13,7 +13,7 @@ const JourneyItem = ({ name, desc, img, date }: any) => {
 
   return (
     <>
-      <div className="max-w-lg flex flex-col items-start border-2 border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#fffdf8b0] dark:bg-[#fffdf810] rounded-lg px-5 py-4 mb-6">
+      <div className="max-w-lg flex flex-col items-start border-2 border-transparent hover:border-sky-400 dark:hover:border-[#e4cf59] bg-[#ffffffb0] dark:bg-[#fffdf810] rounded-lg px-5 py-4 mb-6">
         <p className="text-xl font-semibold mb-1">{name}</p>
         {desc && (
           <p className="text-md text-gray-400 mb-2 line-clamp-2">{desc}</p>

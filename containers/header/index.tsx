@@ -64,7 +64,7 @@ const Header = () => {
             Contact
           </p>
           <p
-            className="mr-8 px-4 py-2 cursor-pointer rounded-lg border border-gray-600 dark:border-transparent bg-[#fffdf8b0] dark:bg-[#fffdf81a] hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
+            className="mr-8 px-4 py-2 cursor-pointer rounded-lg border border-gray-600 dark:border-transparent bg-[#ffffffb0] dark:bg-[#fffdf81a] hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
             onClick={() => navigateTo('/resume')}
           >
             Resume
@@ -82,7 +82,7 @@ const Header = () => {
           <div className="md:hidden">
             <div
               ref={ref}
-              className="mx-4 p-4 space-y1 sm:px-3 flex flex-col rounded-xl bg-[#fffdf8b0] dark:bg-[#fffdf81a]"
+              className="mx-4 p-4 space-y1 sm:px-3 flex flex-col rounded-xl bg-[#ffffffb0] dark:bg-[#fffdf81a]"
             >
               <div className="w-full text-center py-3 mb-2 rounded-xl group hover:bg-sky-100 dark:hover:bg-[#e4cf59] dark:text-gray-400 hover:text-sky-800 dark:hover:text-gray-800">
                 <p
