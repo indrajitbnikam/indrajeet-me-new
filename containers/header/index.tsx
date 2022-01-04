@@ -46,7 +46,7 @@ const Header = () => {
         </p>
         <nav className="hidden md:ml-auto md:flex flex-wrap items-center text-base justify-center">
           <p
-            className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
+            className="mr-8 cursor-pointer hover:scale-105 hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
             onClick={() => navigateTo('/projects')}
           >
             Projects
@@ -58,13 +58,13 @@ const Header = () => {
             Blogs
           </p> */}
           <p
-            className="mr-8 cursor-pointer hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
+            className="mr-8 cursor-pointer hover:scale-105 hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
             onClick={() => navigateTo('/contact')}
           >
             Contact
           </p>
           <p
-            className="mr-8 px-4 py-2 cursor-pointer rounded-lg border border-gray-600 dark:border-transparent bg-[#ffffffb0] dark:bg-[#fffdf81a] hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
+            className="mr-8 px-4 py-2 cursor-pointer rounded-lg border hover:scale-105 border-gray-600 dark:border-transparent bg-[#ffffffb0] dark:bg-[#fffdf81a] hover:text-gray-900 dark:text-gray-400 dark:hover:text-[#f8f7f1]"
             onClick={() => navigateTo('/resume')}
           >
             Resume

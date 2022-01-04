@@ -50,7 +50,7 @@ const Hero = () => {
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container max-w-[1200px] mx-auto flex justify-between px-5 md:px-10 py-10 md:py-24 md:flex-row flex-col-reverse items-center">
+      <div className="container max-w-[1100px] mx-auto flex justify-between px-5 md:px-10 py-10 md:py-24 md:flex-row flex-col-reverse items-center">
         <div className="flex flex-col md:items-start md:text-left items-center text-center">
           <h1 className="leading-relaxed text-4xl sm:text-6xl font-medium text-gray-800 dark:text-[#f8f7f1]">
             Hello!
