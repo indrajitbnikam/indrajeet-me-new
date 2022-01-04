@@ -11,7 +11,7 @@ import {
 import { openUrl } from '../../helpers/url';
 
 const Hero = () => {
-  const iamPhrases = ['#ReactDeveloper', '#Web3Enthusiast', '#AnimeLover'];
+  const iamPhrases = ['Beautiful', 'Scalable', 'Considerate'];
   const [iamPhrase, setIamPhrase] = useState(iamPhrases[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -50,7 +50,7 @@ const Hero = () => {
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container max-w-[1000px] mx-auto flex justify-between px-5 md:px-10 py-10 md:py-24 md:flex-row flex-col-reverse items-center">
+      <div className="container max-w-[1200px] mx-auto flex justify-between px-5 md:px-10 py-10 md:py-24 md:flex-row flex-col-reverse items-center">
         <div className="flex flex-col md:items-start md:text-left items-center text-center">
           <h1 className="leading-relaxed text-4xl sm:text-6xl font-medium text-gray-800 dark:text-[#f8f7f1]">
             Hello!
@@ -59,14 +59,16 @@ const Hero = () => {
             <span>
               I am{' '}
               <span className="leading-relaxed font-semibold text-sky-400 dark:text-[#e4cf59]">
-                Indrajeet.
+                React Dev
               </span>
             </span>
           </p>
-          <p className="leading-relaxed text-2xl sm:text-3xl dark:text-gray-300">
+          <p className="leading-relaxed text-2xl sm:text-3xl text-gray-400 dark:text-gray-300">
+            I build{' '}
             <span className="underline underline-offset-2 decoration-sky-400 dark:decoration-[#e4cf59]">
               {iamPhrase}
-            </span>
+            </span>{' '}
+            products.
           </p>
           <div className="flex gap-4 sm:gap-8 mt-8 items-center text-2xl text-gray-600 dark:text-gray-400">
             <SiHashnode

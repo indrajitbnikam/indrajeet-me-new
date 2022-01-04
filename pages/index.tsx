@@ -7,7 +7,7 @@ import SectionLayout from '../layouts/section-layout';
 import Skills from '../containers/skills';
 import { getFirstNBlogs, getFirstNProjects, getResume } from '../services/api';
 
-const Home: NextPage = ({ blogs, projects }: any) => {
+const Home: NextPage = ({ projects }: any) => {
   return (
     <>
       <Head>
@@ -26,34 +26,18 @@ const Home: NextPage = ({ blogs, projects }: any) => {
         <Projects projects={projects} />
       </SectionLayout>
 
-      <SectionLayout title="My" highlightedTitle="Blogs">
+      {/* <SectionLayout title="My" highlightedTitle="Blogs">
         <Blogs blogs={blogs} />
-      </SectionLayout>
-
-      {/* <SectionLayout title="My" highlightedTitle="Projects">
-        Projects
-      </SectionLayout>
-
-      <SectionLayout title="My" highlightedTitle="Contact">
-        Contact
-      </SectionLayout>
-
-      <SectionLayout title="My" highlightedTitle="Journey">
-        Journey
       </SectionLayout> */}
     </>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const [blogs, projects] = await Promise.all([
-    getFirstNBlogs(),
-    getFirstNProjects(),
-  ]);
+  const projects = await getFirstNProjects();
 
   return {
     props: {
-      blogs,
       projects,
     },
   };
