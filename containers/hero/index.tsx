@@ -49,63 +49,63 @@ const Hero = () => {
   }, 4000);
 
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container max-w-[1100px] mx-auto flex justify-between px-5 md:px-10 py-10 md:py-24 md:flex-row flex-col-reverse items-center">
-        <div className="flex flex-col md:items-start md:text-left items-center text-center">
-          <h1 className="leading-relaxed text-4xl sm:text-6xl font-medium text-gray-800 dark:text-[#f8f7f1]">
+    <section className='text-gray-600 body-font'>
+      <div className='container max-w-[1100px] mx-auto flex justify-between px-5 md:px-10 py-10 md:py-24 md:flex-row flex-col-reverse items-center'>
+        <div className='flex flex-col items-center text-center md:items-start md:text-left'>
+          <h1 className='leading-relaxed text-4xl sm:text-6xl font-medium text-gray-800 dark:text-[#f8f7f1]'>
             Hello!
           </h1>
-          <p className="leading-relaxed text-4xl sm:text-6xl dark:text-gray-300">
+          <p className='text-4xl leading-relaxed sm:text-6xl dark:text-gray-300'>
             <span>
               I am{' '}
-              <span className="leading-relaxed font-semibold text-sky-400 dark:text-[#e4cf59]">
+              <span className='leading-relaxed font-semibold text-sky-400 dark:text-[#e4cf59]'>
                 React Dev
               </span>
             </span>
           </p>
-          <p className="leading-relaxed text-2xl ml-0 sm:ml-1 sm:text-3xl text-gray-400">
+          <p className='ml-0 text-2xl leading-relaxed text-gray-400 sm:ml-1 sm:text-3xl'>
             I build{' '}
-            <span className="underline underline-offset-2 text-gray-600 decoration-sky-400 dark:decoration-[#e4cf59]">
+            <span className='underline underline-offset-2 text-gray-600 dark:text-[#f8f7f1] decoration-sky-400 dark:decoration-[#e4cf59]'>
               {iamPhrase}
             </span>{' '}
             products.
           </p>
-          <div className="flex gap-4 sm:gap-8 mt-8 items-center text-2xl text-gray-600 dark:text-gray-400">
+          <div className='flex items-center gap-4 mt-8 text-2xl text-gray-600 sm:gap-8 dark:text-gray-400'>
             <SiHashnode
-              className="cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300"
+              className='cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300'
               onClick={() => openHashnode()}
             />
             <SiGithub
-              className="cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300"
+              className='cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300'
               onClick={() => openGithub()}
             />
             <SiStackoverflow
-              className="cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300"
+              className='cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300'
               onClick={() => openStackOverflow()}
             />
             <SiTwitter
-              className="cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300"
+              className='cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300'
               onClick={() => openTwitter()}
             />
             <SiLinkedin
-              className="cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300"
+              className='cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300'
               onClick={() => openLinkedIn()}
             />
             <SiXing
-              className="cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300"
+              className='cursor-pointer dark:hover:text-[#e4cf59] hover:text-sky-300'
               onClick={() => openXing()}
             />
           </div>
         </div>
-        <div className="mb-10 md:mb-0 flex justify-end align-middle">
-          <div className="rounded-full h-[200px] w-[200px] md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px] overflow-hidden ring ring-gray-600 hover:ring-sky-400 ring-offset-4 ring-offset-[#f8f7f1] dark:ring-[#f8f7f1] dark:ring-offset-[#374151] dark:hover:ring-[#e4cf59] hover:ring-offset-8 hover:scale-105 transition-transform">
+        <div className='flex justify-end mb-10 align-middle md:mb-0'>
+          <div className='rounded-full h-[200px] w-[200px] md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px] overflow-hidden ring ring-gray-600 hover:ring-sky-400 ring-offset-4 ring-offset-[#f8f7f1] dark:ring-[#f8f7f1] dark:ring-offset-[#374151] dark:hover:ring-[#e4cf59] hover:ring-offset-8 hover:scale-105 transition-transform'>
             <Image
-              src="/Indra-dp.jpg"
-              alt="Indrajeet profile picture"
-              className="hover:"
-              height="100%"
-              width="100%"
-              layout="responsive"
+              src='/Indra-dp.jpg'
+              alt='Indrajeet profile picture'
+              className='hover:'
+              height='100%'
+              width='100%'
+              layout='responsive'
             />
           </div>
         </div>

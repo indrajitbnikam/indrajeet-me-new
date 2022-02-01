@@ -1,7 +1,7 @@
 import client from '../client';
 
 const blogDataModel =
-  '{ title, desc, img, date, url, tags[]->{name}, author->{ name } }';
+  '{ title, desc, img, date, url, type, tags[]->{name}, author->{ name } }';
 
 const projectDataModel =
   '{ title, desc, img, date, repo, demo, tags[]->{name} }';

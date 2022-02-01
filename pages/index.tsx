@@ -7,38 +7,40 @@ import SectionLayout from '../layouts/section-layout';
 import Skills from '../containers/skills';
 import { getFirstNBlogs, getFirstNProjects, getResume } from '../services/api';
 
-const Home: NextPage = ({ projects }: any) => {
+const Home: NextPage = ({ projects, blogs }: any) => {
   return (
     <>
       <Head>
         <title>Indrajeet Nikam</title>
-        <meta name="description" content="Indrajeet Nikam - Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Indrajeet Nikam - Portfolio' />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <Hero />
 
-      <SectionLayout title="My" highlightedTitle="Skills">
+      <SectionLayout title='My' highlightedTitle='Skills'>
         <Skills />
       </SectionLayout>
 
-      <SectionLayout title="My" highlightedTitle="Projects">
+      <SectionLayout title='My' highlightedTitle='Projects'>
         <Projects projects={projects} />
       </SectionLayout>
 
-      {/* <SectionLayout title="My" highlightedTitle="Blogs">
+      <SectionLayout title='My' highlightedTitle='Blogs'>
         <Blogs blogs={blogs} />
-      </SectionLayout> */}
+      </SectionLayout>
     </>
   );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const projects = await getFirstNProjects();
+  const blogs = await getFirstNBlogs();
 
   return {
     props: {
       projects,
+      blogs,
     },
   };
 };
