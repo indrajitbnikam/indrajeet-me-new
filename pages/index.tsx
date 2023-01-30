@@ -5,9 +5,10 @@ import Hero from '../containers/hero';
 import Projects from '../containers/projects';
 import SectionLayout from '../layouts/section-layout';
 import Skills from '../containers/skills';
-import { getFirstNBlogs, getFirstNProjects, getResume } from '../services/api';
+import { getFirstNBlogs, getFirstNProjects, getAuthorInfo } from '../services/api';
 
-const Home: NextPage = ({ projects, blogs }: any) => {
+const Home: NextPage = ({ authorInfo, projects, blogs }: any) => {
+
   return (
     <>
       <Head>
@@ -16,7 +17,7 @@ const Home: NextPage = ({ projects, blogs }: any) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Hero />
+      <Hero authorInfo={authorInfo} />
 
       <SectionLayout title='My' highlightedTitle='Skills'>
         <Skills />
@@ -34,11 +35,13 @@ const Home: NextPage = ({ projects, blogs }: any) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const authorInfo = await getAuthorInfo();
   const projects = await getFirstNProjects();
   const blogs = await getFirstNBlogs();
 
   return {
     props: {
+      authorInfo,
       projects,
       blogs,
     },

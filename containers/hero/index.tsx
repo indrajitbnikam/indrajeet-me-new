@@ -10,7 +10,14 @@ import {
 } from 'react-icons/si';
 import { openUrl } from '../../helpers/url';
 
-const Hero = () => {
+type Props = {
+  authorInfo: {
+    name: string;
+    imgUrl: string;
+  }
+}
+
+const Hero = ({ authorInfo }: Props) => {
   const iamPhrases = ['Beautiful', 'Scalable', 'Considerate'];
   const [iamPhrase, setIamPhrase] = useState(iamPhrases[0]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -100,8 +107,8 @@ const Hero = () => {
         <div className='flex justify-end mb-10 align-middle md:mb-0'>
           <div className='rounded-full h-[200px] w-[200px] md:h-[300px] md:w-[300px] lg:h-[400px] lg:w-[400px] overflow-hidden ring ring-gray-600 hover:ring-sky-400 ring-offset-4 ring-offset-[#f8f7f1] dark:ring-[#f8f7f1] dark:ring-offset-[#374151] dark:hover:ring-[#e4cf59] hover:ring-offset-8 hover:scale-105 transition-transform'>
             <Image
-              src='/Indra-dp.jpg'
-              alt='Indrajeet profile picture'
+              src={authorInfo.imgUrl}
+              alt={`${authorInfo.name} picture`}
               className='hover:'
               height='100%'
               width='100%'
